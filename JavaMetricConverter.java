@@ -42,5 +42,6 @@ public class JavaMetricConverter {
             System.out.println("Please input a valid response");
         }
         }
+        java.util.Scanner.close()
     }
 }
