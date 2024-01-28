@@ -33,10 +33,9 @@ public class MatrixTxt {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
                 for (int i = 0; i < matrix.length; i++) {
                     for (int j = 0; j < matrix[i].length; j++) {
-                        // Write each element of the matrix to the file
                         writer.write(matrix[i][j] + " ");
                     }
-                    writer.newLine(); // Move to the next line for the next row
+                    writer.newLine(); 
                 }
                 System.out.println("Matrix written to " + filename);
             } catch (IOException e) {
