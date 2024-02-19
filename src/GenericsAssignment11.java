@@ -24,12 +24,10 @@ public static <T extends Comparable<T>> void bubbleSort(T[] array){
     }
 }   
     public static <T extends Comparable<T>> void merge(T[] arr, int left, int mid, int right) { 
-        int n1 = mid - left;
+    int n1 = mid - left;
     int n2 = right - mid;
-
     T[] leftArr = Arrays.copyOfRange(arr, left, mid);
     T[] rightArr = Arrays.copyOfRange(arr, mid, right);
-
     int i = 0, j = 0, k = left;
     while (i < n1 && j < n2) {
         if (leftArr[i].compareTo(rightArr[j]) <= 0) {
@@ -38,11 +36,9 @@ public static <T extends Comparable<T>> void bubbleSort(T[] array){
             arr[k++] = rightArr[j++];
         }
     }
-
     while (i < n1) {
         arr[k++] = leftArr[i++];
     }
-
     while (j < n2) {
         arr[k++] = rightArr[j++];
     }
